@@ -1,5 +1,5 @@
 ## Discord-UNO Example Bot
-This Repository demonstrates how to use the NPM Package [discord-uno](https://github.com/Maxisthemoose/discord-uno)
+This Repository demonstrates how to use the NPM Package [discord-uno](https://github.com/Maxisthemoose/discord-uno).
 
 ### How to use
 1. Clone this repository to your desired work location on your computer.
