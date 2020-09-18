@@ -1,0 +1,19 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "./src",
+  "dependencies": {
+    "@types/node": "^14.10.2",
+    "discord-uno": "file:../../../Documents/npm-packages/discord-uno",
+    "discord.js": "^12.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
