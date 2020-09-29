@@ -9,6 +9,7 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
+    
     if (message.content.toLowerCase() === "!creategame")
         await discordUNO.createGame(message);
 
@@ -34,17 +35,13 @@ client.on("message", async message => {
         await discordUNO.endGame(message);
 
     else if (message.content.toLowerCase() === "!draw") 
-        await discordUNO.draw(mssage);
+        await discordUNO.draw(message);
 
-    else if (message.content.toLowerCase().startsWith("!settings")) {
-        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    else if (message.content.toLowerCase() === "!settings")
+        await discordUNO.updateSettings(message);
 
-        const setting = args[1];
-        const onOff = args[2];
-        const set = onOff === "on" ? true : onOff === "off" ? false : undefined;
-
-        await discordUNO.updateSettings(message, setting, set)
-    }
+    else if (message.content.toLowerCase() === "!viewsettings")
+        await discordUNO.viewSettings(message);
     
 });
 

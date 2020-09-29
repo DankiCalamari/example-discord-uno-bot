@@ -6,7 +6,7 @@
   "module": "./src",
   "dependencies": {
     "@types/node": "^14.10.2",
-    "discord-uno": "file:../../../Documents/npm-packages/discord-uno",
+    "discord-uno": "^1.0.0",
     "discord.js": "^12.3.1"
   },
   "devDependencies": {},
