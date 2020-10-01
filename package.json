@@ -6,11 +6,12 @@
   "module": "./src",
   "dependencies": {
     "@types/node": "^14.10.2",
-    "discord-uno": "^1.0.0",
+    "discord-uno": "file:../../npm-packages/discord-uno",
     "discord.js": "^12.3.1"
   },
   "devDependencies": {},
   "scripts": {
+    "dev": "npm un discord-uno && npm i C:\\Users\\orion\\Documents\\npm-packages\\discord-uno && node .\\index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

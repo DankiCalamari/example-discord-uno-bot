@@ -1,15 +1,14 @@
 const client = new (require("discord.js").Client);
 const { DiscordUNO } = require("discord-uno");
 const { token } = require("./config.json")
-const discordUNO = new DiscordUNO(client);
 const prefix = "!";
-
+let discordUNO = new DiscordUNO(client);
 client.on("ready", () => {
-    console.log("ready")
+    console.log("ready");
 });
 
 client.on("message", async message => {
-    
+
     if (message.content.toLowerCase() === "!creategame")
         await discordUNO.createGame(message);
 
@@ -42,7 +41,13 @@ client.on("message", async message => {
 
     else if (message.content.toLowerCase() === "!viewsettings")
         await discordUNO.viewSettings(message);
-    
+        
+    else if (message.content.toLowerCase().startsWith("!uno"))
+        await discordUNO.UNO(message);
+
+    else if (message.content.toLowerCase() === "!table") 
+        await discordUNO.viewTable(message);
+
 });
 
 client.login(token);
