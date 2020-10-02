@@ -1,13 +1,17 @@
 const client = new (require("discord.js").Client);
-const { DiscordUNO } = require("discord-uno");
+const { DiscordUNO } = require("discord-uno")
 const { token } = require("./config.json")
-const prefix = "!";
-let discordUNO = new DiscordUNO(client);
+const discordUNO = new DiscordUNO("YELLOW"); /** You can add an optional string to the class, 
+                                    this string (color) will be the color for all embeds that 
+                                    are sent. ie: new DiscordUNO("RED"), any Discord ColorResolvable
+                                    will work. **/
+
+
 client.on("ready", () => {
     console.log("ready");
 });
 
-client.on("message", async message => {
+client.on("message", async (message) => {
 
     if (message.content.toLowerCase() === "!creategame")
         await discordUNO.createGame(message);
@@ -47,6 +51,9 @@ client.on("message", async message => {
 
     else if (message.content.toLowerCase() === "!table") 
         await discordUNO.viewTable(message);
+
+    else if (message.content.toLowerCase() === "!checkversion")
+        await discordUNO.version.updates(message);
 
 });
 
